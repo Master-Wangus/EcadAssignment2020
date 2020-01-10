@@ -7,8 +7,8 @@ Working in a team of 3 or 4 students, you are required to design and implement a
 web-based online store selling baby products for a local merchant. Each team
 member is required to implement 1 of the 4 functional areas described in Section
 
-## 3.0. In addition, the team is required to integrate the different functional areas that
-the team has implemented to present an integrated system.
+## 3.0 FUNCTIONS OF THE SYSTEM 
+In addition, the team is required to integrate the different functional areas that the team has implemented to present an integrated system.
 The data dictionary of this online store is shown in Appendix A. You can download
 a script file that contains the database schema and sample data to construct your
 database for the website, as well as product image files required for your
