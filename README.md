@@ -18,12 +18,15 @@ other product images from the Internet for this assignment, but do take note tha
 images file downloaded should be purely used for the purpose of doing this
 assignment and should not be used or posted in other websites, e.g.,
 Facebook.
+
 You may choose a name of your choice for your eCommerce store but the name
 should not be a registered business, or is insulting, intrusive or defamatory in
 nature.
+
 You should NOT copy the website design of other websites.
+
 The required resources for this assignment are:
-▪ XAMPP
-▪ Adobe Creative Cloud - Dreamweaver
-All programs should be developed using HTML, JavaScript, Bootstrap
-Framework, PHP and MySQL technologies.
+- XAMPP
+- Adobe Creative Cloud - Dreamweaver
+
+*All programs should be developed using HTML, JavaScript, Bootstrap Framework, PHP and MySQL technologies.*
