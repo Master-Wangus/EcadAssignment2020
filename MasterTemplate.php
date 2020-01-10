@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Mamaya e-BookStore</title>
+    <title>Johnson's Johnson</title>
     <!--Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!--jQuery library-->
@@ -18,7 +18,7 @@
       <div class="row">
 	  <div class="col-sm-12">
 	  <a href = "index.php">
-	  <img src = "Images/mamayaebooks.jpg" alt ="Logo"
+	  <img src = "Images/johnson.jpg" alt ="Logo"
 	  class = "img-fluid" style = "width:100%"/></a>
 	  </div>
 	  </div>
@@ -39,8 +39,8 @@
 	  <div class ="col-sm-12" style ="text-align:right;">
 	  <hr/>
 	  Do you need help? Please email to:
-	  <a href="mailto:mamaya@np.edu.sg">mamaya@np.edu.sg</a>
-	  <p style = "font-size:12px">&copy;Copyright by Mamaya Group</p>
+	  <a href="mailto:mamaya@np.edu.sg">johnson@np.edu.sg</a>
+	  <p style = "font-size:12px">&copy;Copyright by Johnson Group</p>
 	  </div>
     </div>
   </body>
