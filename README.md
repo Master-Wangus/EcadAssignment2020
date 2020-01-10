@@ -1,14 +1,15 @@
-## 1.0 OBJECTIVE
+### 1.0 OBJECTIVE
 This assignment assesses the student’s ability to design and build a web-based
 application for electronic commerce.
 
-## 2.0 SCOPE
+### 2.0 SCOPE
 Working in a team of 3 or 4 students, you are required to design and implement a
 web-based online store selling baby products for a local merchant. Each team
 member is required to implement 1 of the 4 functional areas described in Section
 
-## 3.0 FUNCTIONS OF THE SYSTEM 
-In addition, the team is required to integrate the different functional areas that the team has implemented to present an integrated system.
+### 3.0 FUNCTIONS OF THE SYSTEM 
+In addition, the team is required to integrate the different functional areas that the 
+team has implemented to present an integrated system.
 The data dictionary of this online store is shown in Appendix A. You can download
 a script file that contains the database schema and sample data to construct your
 database for the website, as well as product image files required for your
@@ -23,10 +24,10 @@ You may choose a name of your choice for your eCommerce store but the name
 should not be a registered business, or is insulting, intrusive or defamatory in
 nature.
 
-You should NOT copy the website design of other websites.
+You should **_NOT copy the website design of other websites._**
 
 The required resources for this assignment are:
 - XAMPP
 - Adobe Creative Cloud - Dreamweaver
 
-*All programs should be developed using HTML, JavaScript, Bootstrap Framework, PHP and MySQL technologies.*
+**All programs should be developed using HTML, JavaScript, Bootstrap Framework, PHP and MySQL technologies.**
