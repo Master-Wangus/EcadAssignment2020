@@ -15,7 +15,7 @@ class Mysql_Driver
         $host = 'localhost';
         $user = 'root';
         $password = '';
-        $database = 'mamaya'; 
+        $database = 'baby_products'; 
     
         $this->connection = mysqli_connect($host, $user, $password, $database);
 		if (mysqli_connect_errno($this->connection))
