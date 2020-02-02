@@ -27,8 +27,8 @@ while ($row = $conn -> fetch_array($result))
 {
 	$MainContent .= "<tr>";
 	$img = "./Images/products/$row[ProductImage]";
-	$MainContent .= "<td><img src = '$img' alt='$row[ProductTitle]'style='width:120px;height:120px;'/></td>";
 	$product = "productDetails.php?pid=$row[ProductID]";
+	$MainContent .= "<td><a href=$product><img src = '$img' alt='$row[ProductTitle]'style='width:120px;height:120px;'/></a></td>";
 	$Quantity=$row["Quantity"];
 	$MainContent .= "<td><a href =$product>$row[ProductTitle]</a><div style='font-style:italic'>In stock:&nbsp$Quantity&nbspleft</div></td>";
 	$MainContent .= "<td>";
