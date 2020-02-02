@@ -9,6 +9,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Latest compiled ad minified CSS-->
     <script src="js/bootstrap.min.js"></script>
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
     <!-- Site specific Cascaing Stylesheet -->
     <link rel="stylesheet" href="css/site.css" />
   </head>
