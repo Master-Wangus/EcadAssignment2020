@@ -10,44 +10,47 @@ $result = $conn->query($qry);
 	
 if ($conn->num_rows($result) > 0) {
 // the page header and header row of offer
-$MainContent = "<p class = 'page-title' style = 'text-align:center'>On Offer!</p>";
-$MainContent .= "<table class = 'table table-hover'>";
-$MainContent .= "<thead class = 'cart-header'>";
-$MainContent .= "<tr bgcolor='#FF8C00'>";
-$MainContent .= "<th width = '100px'>Products</th>";
-$MainContent .= "<th>&nbsp</th>";
-$MainContent .= "<th></th>";
-$MainContent .= "<th width = '90px'>Price</th>";
-$MainContent .= "<th width = '140px'>Days Left!</th>";
-$MainContent .= "</tr>";
-$MainContent .= "</thead>";
-// Display the shopping cart content
-$MainContent .= "<tbody>";
+$MainContent = "<div id='demo' class='carousel slide' data-ride'=carousel' >";
+$MainContent .= "<div class='carousel-inner'>";
+$rowcount = 0;
 while ($row = $conn -> fetch_array($result))
 {
-	$MainContent .= "<tr>";
+	$rowcount++;
+	$name = "$row[ProductTitle]";
 	$img = "./Images/products/$row[ProductImage]";
 	$product = "productDetails.php?pid=$row[ProductID]";
-	$MainContent .= "<td><a href=$product><img src = '$img' alt='$row[ProductTitle]'style='width:120px;height:120px;'/></a></td>";
 	$Quantity=$row["Quantity"];
-	$MainContent .= "<td><a href =$product>$row[ProductTitle]</a><div style='font-style:italic'>In stock:&nbsp$Quantity&nbspleft</div></td>";
-	$MainContent .= "<td>";
 	$formattedPrice = number_format($row["Price"],2);
 	$offerend = new DateTime($row["OfferEndDate"]);
 	$today = new DateTime(Date("y-m-d"));
 	$daysleft = $today->diff($offerend)->days;
 	$formattedOfferedPrice = number_format($row["OfferedPrice"],2);
-	$MainContent .= "<td><s>S$$formattedPrice</s>";
-	$MainContent .= "<div>S$$formattedOfferedPrice</div></td>";
-	$MainContent .= "<td>$daysleft</td>";
-	$MainContent .= "</tr>";
+	if($rowcount==1)
+	{
+		$MainContent .= "<div class='carousel-item active'>";
 	}
-	$MainContent .= "</tbody>";
-	$MainContent .= "</table>";
+	else
+	{
+		$MainContent .= "<div class='carousel-item'>";
+	}
+	$MainContent .= "<div class='image'><a href='$product'><img class='d-block mx-auto' src='$img' alt='$name'></a></div>";
+	$MainContent .= "<div class='top'>
+	<div class='text1'>Quick! Only $Quantity left! Offer ends in $daysleft days!</div></div>";
+	$MainContent .= "<div class='middle'>
+	<div class='text'>$name</div>
+	<div class='text'><s>S$$formattedPrice</s></div>
+	<div class='text'>S$$formattedOfferedPrice</div>
+	</div>";
+	$MainContent .= "</div>";
+	}
+	$MainContent .="</div>";
+	$MainContent .= "<a class='carousel-control-prev' href='#demo' data-slide='prev'>";
+	$MainContent .= "<span class='carousel-control-prev-icon'></span>";
+	$MainContent .= "</a>";
+	$MainContent .= "<a class='carousel-control-next' href='#demo' data-slide='next'>";
+	$MainContent .= "<span class='carousel-control-next-icon'></span>";
+	$MainContent .= "</a>";
+	$MainContent .= "</div>";
 }
-
-$MainContent .= "<img src='Images/baby.jpg'  
-                     class='img-fluid' 
-                     style='display:block; margin:auto;'/>";
 include("MasterTemplate.php"); 
-?>
+

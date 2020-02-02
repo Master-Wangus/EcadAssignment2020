@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <title>Johnson's Johnson</title>
     <!--Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <!--jQuery library-->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled ad minified CSS-->
-    <script src="js/bootstrap.min.js"></script>
-	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Site specific Cascaing Stylesheet -->
     <link rel="stylesheet" href="css/site.css" />
 	<!-- Load font awesome icons -->
@@ -23,6 +23,7 @@
   </head>
   <body>
   <style>
+  
   /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
   position: fixed;
@@ -61,6 +62,69 @@
   background: #007bb5;
   color: white;
 }
+
+.carousel-inner img 
+{
+	 opacity: 1;
+	 display: block;
+	 width: 30%;
+	 height: 30%;
+	 transition: .5s ease;
+	 backface-visibility: hidden;
+	 }
+.carousel-item:hover .image
+{
+	opacity: 0.5;	
+}
+.carousel-item:hover .middle
+{
+	opacity: 1;	
+}
+.carousel-item:hover .top
+{
+	opacity: 1;	
+}
+.text {
+  color: black;
+  font-size: 16px;
+}
+.text1 {
+  color: black;
+  font-size: 20px;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.top {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.bg { 
+  /* The image used */
+  background-image: url("Images/baby.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
   </style>
     <div class="container">
