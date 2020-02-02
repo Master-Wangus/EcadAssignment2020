@@ -80,10 +80,6 @@
 {
 	opacity: 1;	
 }
-.carousel-item:hover .top
-{
-	opacity: 1;	
-}
 .text {
   color: black;
   font-size: 16px;
@@ -103,7 +99,7 @@
 }
 .top {
   transition: .5s ease;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 10%;
   left: 50%;
