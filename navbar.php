@@ -4,20 +4,20 @@
 $content1 = "Welcome Guest<br />";
 $content2 = "<li class='nav-item'>
 		     <a class='nav-link' href='login.php'>Login</a></li>";
+$content3 ="<li class='nav-item'><a class ='nav-link  btn-outline-info'  href='register.php'>Membership Registration</a></li>";
 
 if(isset($_SESSION["ShopperName"])) { 
     //Display a greeting message, Change Password and logout links 
     //after shopper has logged in.
 	$content1="<b>Welcome</b> <b>$_SESSION[ShopperName]</b>";
 	$content2=" <li class ='nav-item'> <a class='nav-link' href='feedback.php'>Feedback</a></li>
-				<li class ='nav-item'> <a class='nav-link' href='UpdateProfile.php'>Update Profile</a></li>
-			   <li class ='nav-item'><a class = 'nav-link' href = 'logout.php'>Logout</a></li>";	
+			   <li class ='nav-item'><a class = 'nav-link' href = 'logout.php'>Logout</a></li>";
+    $content3="<li class ='nav-item'> <a class='nav-link' href='UpdateProfile.php'>Update Profile</a></li>";			   
     //Display number of item in cart
 	if (isset($_SESSION["NumCartItem"]))
 	{
 		$content1 .= ", $_SESSION[NumCartItem] item(s) in shopping cart";
 	}
-	
 }
 ?>
      <!--Display a navbar which is visible before or after collapsing -->
@@ -37,16 +37,13 @@ if(isset($_SESSION["ShopperName"])) {
 	 <span class ="navbar-toggler-icon"></span>
 	 </button>
 	 </nav>
-
     <!-- Define a collapsible navbar -->
 	 <nav class ="navbar navbar-expand-md navbar-light bg-light">
 	 <!-- Collapsible part of navbar -->
 	 <div class = "collapse navbar-collapse" id="collapsibleNavbar">
 	 <!-- Left-justified menu items-->
 	 <ul class = "navbar-nav mr-auto style">
-	 <li class="nav-item">
-	 <a class ="nav-link  btn-outline-info"  href="register.php">Membership Registration</a>
-	 </li>
+	 <?php echo $content3;?>
 	 <li class="nav-item">
 	 <a class ="nav-link  btn-outline-info"  href="category.php">Product Catalogue</a>
 	 </li>
