@@ -93,12 +93,13 @@ if (isset($_SESSION["Cart"])) {
 		$qry = "SELECT SUM(Price * Quantity) as SubTotal FROM shopcartitem WHERE ShopCartID=$_SESSION[Cart]";
 		$result = $conn->query($qry);
 		$row = $conn->fetch_array($result);
-		$MainContent .= "<p style = 'text-align:right'>SubTotal = S$". number_format($row["SubTotal"],2);
 		$_SESSION["SubTotal"] = round($row["SubTotal"],2);
+		$MainContent .= "<p style = 'text-align:right'>SubTotal = S$". number_format($row["SubTotal"],2);
+		$MainContent .= "<div style = 'text-align:right'>Shipping Fee = S$". number_format($_SESSION["ShipCharge"],2);
 		
 		
 		// Add PayPal Checkout button on the shopping cart page
-		$MainContent .="<form method = 'post' action = 'process.php'>";
+		$MainContent .="</div><form method = 'post' action = 'process.php'>";
 		$MainContent .= "<input type='image' style ='float:right;' src='https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif'>";
 		$MainContent .="</form></p>";
 }
